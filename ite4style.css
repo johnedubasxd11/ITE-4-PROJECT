@@ -104,22 +104,44 @@ body {
     box-shadow: 0 0 0 4px rgba(65, 105, 225, 0.15);
 }
 
-/* --- Password Wrapper with Eye Toggle --- */
-.password-wrapper {
+.input-wrapper {
     position: relative;
 }
 
-.eye-toggle {
+.input-wrapper .input-field {
+    padding-inline-start: 42px;
+}
+
+.field-icon {
     position: absolute;
-    right: 12px;
+    inset-inline-start: 14px;
     top: 50%;
     transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--royal-blue);
+    pointer-events: none;
+}
+
+.password-wrapper .input-field {
+    padding-inline-end: 44px;
+}
+
+/* --- Password Eye Toggle --- */
+.eye-toggle {
+    position: absolute;
+    inset-inline-end: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
     cursor: pointer;
-    padding: 4px;
     background: none;
     border: none;
+    border-radius: 6px;
     color: var(--royal-blue);
-    font-size: 1rem;
     transition: color 0.2s ease;
 }
 
@@ -127,11 +149,15 @@ body {
     color: var(--dark-blue);
 }
 
-/* Eye SVG icons – filled with currentColor (royal blue) */
 .eye-icon {
-    width: 18px;
-    height: 18px;
-    display: none; /* hidden by default, shown via JS classes */
+    width: 24px;
+    height: 24px;
+    display: none;
+}
+
+#password[type="password"] + .eye-toggle .eye-icon-show,
+#password[type="text"] + .eye-toggle .eye-icon-hide {
+    display: block;
 }
 
 /* --- Remember Me & Forgot Link --- */
