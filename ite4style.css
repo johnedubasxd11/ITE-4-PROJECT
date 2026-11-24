@@ -6,7 +6,7 @@
     --royal-blue: #4169E1;
     --light-blue: #ADD8E6;
     --white: #FFFFFF;
-    --dark-blue: #2c5aa0; /* slightly darker for hover/active */
+    --dark-blue: #1352af; /* slightly darker for hover/active */
     --error-color: #e74c3c; /* used for error messages (still within spirit) */
 }
 
@@ -182,7 +182,7 @@ body {
     transform: scale(0.98);
 }
 
-//* Loader (spinner) – hidden by default, shown during loading */
+/* Loader (spinner) – hidden by default, shown during loading */
 .btn-loader {
     position: absolute;
     left: 50%;
